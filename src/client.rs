@@ -82,7 +82,7 @@ impl BFCredentials {
 pub struct BFClient {
     client: reqwest::Client,
     destructor: mpsc::SyncSender<()>,
-    session_token: Arc<RwLock<Option<String>>>,
+    pub session_token: Arc<RwLock<Option<String>>>,
     creds: BFCredentials,
     proxy_uri: Option<String>,
 }
