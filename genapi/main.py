@@ -494,7 +494,9 @@ def python_type_to_rust_type(_type: str, mandatory: bool = True) -> str:
         "dateTime": "DateTime<Utc>",  # possibly an unaware DT
         # These are pretty hacky, we should parse properly
         "Set[string]": "Vec<String>",
-        "Map[string, string]": "HashMap<String, String>",
+        # only found on runner metadata, documented as map(string, string)
+        # but value is nullable
+        "Map[string, string]": "HashMap<String, Option<String>>",
         "Map[string, Matches]": "HashMap<String, Matches>",
     }
 
