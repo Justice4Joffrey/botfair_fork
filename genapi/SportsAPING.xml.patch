@@ -1,11 +1,20 @@
---- SportsAPING.xml	2019-10-26 23:59:42.396665946 +0200
-+++ SportsAPING.xml.new	2019-10-27 00:24:13.473332462 +0200
+--- SportsAPING.patched.xml	2020-07-17 23:57:50.777188002 +0100
++++ SportsAPING.xml	2020-07-17 23:52:16.768196759 +0100
+@@ -1184,7 +1184,7 @@
+         <parameter mandatory="true" name="handicap" type="double">
+             <description>The handicap</description>
+         </parameter>
+-        <parameter name="sortPriority" type="i32">
++        <parameter mandatory="true" name="sortPriority" type="i32">
+             <description>The sort priority of this runner</description>
+         </parameter>
+         <parameter name="metadata" type="map(string,string)">
 @@ -1204,7 +1204,7 @@
          <parameter mandatory="true" name="status" type="string">
              <description>The status of the selection (i.e., ACTIVE, REMOVED, WINNER, LOSER)</description>
          </parameter>
--        <parameter mandatory="true" name="adjustmentFactor" type="double">
-+        <parameter name="adjustmentFactor" type="double">
+-        <parameter name="adjustmentFactor" type="double">
++        <parameter mandatory="true" name="adjustmentFactor" type="double">
              <description>The adjustment factor applied if the selection is removed</description>
          </parameter>
          <parameter name="lastPriceTraded" type="double">

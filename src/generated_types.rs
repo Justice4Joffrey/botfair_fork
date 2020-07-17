@@ -480,9 +480,10 @@ pub struct RunnerCatalog {
     pub selectionId: SelectionId,
     pub runnerName: String,
     pub handicap: f64,
-    pub sortPriority: i32,
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub metadata: Option<HashMap<String, String>>,
+    pub sortPriority: Option<i32>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub metadata: Option<HashMap<String, Option<String>>>,
 }
 /// The dynamic data about runners in a market
 #[derive(Debug, Deserialize, Serialize)]
