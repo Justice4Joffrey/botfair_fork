@@ -710,7 +710,8 @@ pub struct MarketDescription {
     pub settleTime: Option<DateTime<Utc>>,
     pub bettingType: String,
     pub turnInPlayEnabled: bool,
-    pub marketType: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub marketType: Option<String>,
     pub regulator: String,
     pub marketBaseRate: f64,
     pub discountAllowed: bool,

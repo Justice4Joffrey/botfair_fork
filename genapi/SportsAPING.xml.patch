@@ -1,4 +1,4 @@
---- SportsAPING.patched.xml	2020-07-17 23:57:50.777188002 +0100
+--- SportsAPING.patched.xml	2020-07-18 00:16:55.787861186 +0100
 +++ SportsAPING.xml	2020-07-17 23:52:16.768196759 +0100
 @@ -1184,7 +1184,7 @@
          <parameter mandatory="true" name="handicap" type="double">
@@ -18,3 +18,12 @@
              <description>The adjustment factor applied if the selection is removed</description>
          </parameter>
          <parameter name="lastPriceTraded" type="double">
+@@ -1562,7 +1562,7 @@
+         <parameter name="turnInPlayEnabled" type="bool" mandatory="true">
+             <description>canTurnInPlay</description>
+         </parameter>
+-        <parameter name="marketType" type="string">
++        <parameter name="marketType" type="string" mandatory="true">
+             <description>market base type</description>
+         </parameter>
+         <parameter name="regulator" type="string" mandatory="true">
