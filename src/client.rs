@@ -42,7 +42,7 @@ pub struct BFCredentials {
     username: String,
     password: String,
     pfx: Vec<u8>,
-    app_key: String,
+    pub app_key: String,
 }
 
 impl BFCredentials {
