@@ -49,54 +49,6 @@
 //!
 //! `botfair` assumes no password protection for the `pfx` file.
 //!
-//! ```
-//! use botfair::generated_types::{MarketBook, MarketCatalogue};
-//! use botfair::generated_types::{MarketFilter, MarketId};
-//! use botfair::result::Result;
-//! use botfair::{BFClient, BFCredentials};
-//!
-//! fn main() -> Result<()> {
-//!     let bf_creds = BFCredentials::new(
-//!         "my_username".to_owned(),
-//!         "my_password".to_owned(),
-//!         "/path/to/pfx/file".to_owned(),
-//!         "my_appkey".to_owned()
-//!     ).unwrap();
-//!
-//!     let bf_client = BFClient::new(
-//!         bf_creds,
-//!         None
-//!     ).unwrap();
-//!
-//!     // This is all rather verbose at the moment.
-//!     // What will the future bring?
-//!     let market_filter = MarketFilter {
-//!         textQuery: None,
-//!         exchangeIds: None,
-//!         eventTypeIds: None,
-//!         eventIds: None,
-//!         competitionIds: None,
-//!         marketIds: None,
-//!         venues: None,
-//!         bspOnly: None,
-//!         turnInPlayEnabled: None,
-//!         inPlayOnly: None,
-//!         marketBettingTypes: None,
-//!         marketCountries: None,
-//!         marketTypeCodes: None,
-//!         marketStartTime: None,
-//!         withOrders: None,
-//!         raceTypes: None,
-//!     };
-//!
-//!     // List ten arbitrary markets
-//!     let catalogues: Vec<MarketCatalogue> =
-//!         bf_client.listMarketCatalogue(market_filter, None, None, 10, None)?;
-//!
-//!     println!("{:?}", catalogues);
-//!     Ok(())
-//! }
-//! ```
 //!
 //! ## Generating the bindings
 //!
