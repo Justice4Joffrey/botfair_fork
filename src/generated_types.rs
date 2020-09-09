@@ -8,6 +8,7 @@
 
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
+#[cfg_attr(feature = "cargo-clippy", allow(too_many_arguments))]
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
